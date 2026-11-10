@@ -1,5 +1,5 @@
 import requests ##sempre fazer requisições com a biblioteca requests
-import pprint #para ficar bonito e facil de ler
+import pprint #para os dados brutos ficarem fáceis de ler
 
 url_base = "https://pokeapi.co/api/v2/"
 
