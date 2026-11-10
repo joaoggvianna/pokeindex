@@ -9,13 +9,17 @@ def pegar_info_pokemon(nome):
     print(response.status_code)
     if response.status_code == 200:
         poke_dados = response.json()
-        pprint.pprint(f'Nome: {poke_dados["name"]}')
-        pprint.pprint(f'Número na Pokédex: {poke_dados["id"]}')
-        pprint.pprint(f'Tipos: {poke_dados["types"][0]["type"]["name"]}')        
-        pprint.pprint(f'Altura: {poke_dados["height"]}')
-        pprint.pprint(f'Peso: {poke_dados["weight"]}')
-        #pprint.pprint(f'Stats: {poke_dados["stats"][0]["base_stat"]}') #so apareceu o primeiro stat, preciso ver como fazer para aparecer o nome do stat e o valor.
-        #pprint.pprint(poke_dados.keys()) ## essas é a lista de chaves de todos os dados de qualquer pokemon
+        print(f'Nome: {poke_dados["name"]}')
+        print(f'Número na Pokédex: {poke_dados["id"]}')
+        print(f'Tipos: {poke_dados["types"][0]["type"]["name"]}')        
+        print(f'Altura: {poke_dados["height"]}')
+        print(f'Peso: {poke_dados["weight"]}')
+        print('STATUS BASE:')
+        for stat in poke_dados["stats"]:
+            atributo = stat["stat"]["name"]
+            valor = stat["base_stat"]
+            print(f'{atributo}: {valor}')
+        #print(poke_dados.keys()) ## essas é a lista de chaves de todos os dados de qualquer pokemon
 
 
 nome = input("Digite o nome do pokemon: ")
