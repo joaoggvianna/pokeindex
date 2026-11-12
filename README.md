@@ -1,57 +1,79 @@
 # PokéIndex
 
-Buscador de informações de Pokémon desenvolvido em Python para praticar consumo de APIs REST, leitura de JSON e estruturas de repetição.
+Buscador de Pokémon no terminal, desenvolvido em Python para praticar consumo de APIs REST, requisições HTTP e manipulação de dados JSON.
 
-**Status:** MVP funcional — versão de estudo, com melhorias planejadas.
+**Status:** MVP funcional, em evolução.
 
 ## Funcionalidades implementadas
 
-- Consulta de Pokémon pelo nome digitado no terminal.
-- Requisição HTTP à [PokéAPI](https://pokeapi.co/docs/v2) com a biblioteca `requests`.
-- Exibição do código de status HTTP da resposta.
-- Exibição de nome, número na Pokédex, primeiro tipo, altura e peso.
-- Exibição das seis estatísticas base por meio de um laço de repetição: HP, Attack, Defense, Special Attack, Special Defense e Speed.
-
-> A altura e o peso são apresentados nas unidades originais da API (decímetros e hectogramas). Atualmente, apenas o primeiro tipo é exibido.
+- Consulta de Pokémon pelo nome informado pelo usuário.
+- Busca de dados na [PokéAPI](https://pokeapi.co/docs/v2) utilizando `requests`.
+- Exibição do nome e número na Pokédex Nacional.
+- Exibição de todos os tipos, separados por vírgula.
+- Conversão da altura para metros e do peso para quilogramas.
+- Exibição das seis estatísticas base (HP, Attack, Defense, Special Attack, Special Defense e Speed).
+- Mensagem explicativa quando a PokéAPI responde com HTTP 404 (Pokémon não encontrado).
+- Organização da inicialização em uma função `main()`.
 
 ## Tecnologias
 
 - Python
-- Requests
+- Biblioteca `requests`
 - PokéAPI (API REST pública)
 - JSON
 
 ## Como executar
 
-É necessário ter Python 3.9+ e conexão com a internet.
+Tenha o Python instalado e uma conexão com a internet. No terminal:
 
 ```bash
 git clone https://github.com/joaoggvianna/pokeindex.git
 cd pokeindex
-python -m pip install -r requirements.txt
+python -m pip install requests
 python main.py
 ```
 
-Em alguns sistemas, substitua `python` por `python3`. Digite o nome de um Pokémon quando solicitado.
+Em alguns sistemas, use `python3` no lugar de `python`.
 
-## Estado atual e próximos passos
+O programa solicitará o nome de um Pokémon (por exemplo, `charizard`) e exibirá as informações retornadas pela API.
 
-O fluxo principal de consulta e apresentação dos dados está implementado. Ainda não há tratamento completo de erros nem testes automatizados documentados.
+### Exemplo de saída
 
-- [x] Receber o nome de um Pokémon pelo terminal.
-- [x] Consultar a PokéAPI.
-- [x] Ler a resposta JSON.
-- [x] Mostrar informações básicas.
-- [x] Percorrer e mostrar as seis estatísticas base.
-- [ ] Exibir todos os tipos de Pokémon.
-- [ ] Converter altura para metros e peso para quilogramas.
-- [ ] Normalizar a entrada do usuário (espaços e maiúsculas/minúsculas).
-- [ ] Tratar Pokémon inexistente, falhas HTTP, timeout e problemas de conexão.
-- [ ] Ajustar a montagem da URL para evitar barras duplicadas.
-- [ ] Criar testes automatizados para os principais cenários.
+```text
+Seja bem vindo ao POKÉINDEX!
+Aqui você pode consultar as informações de qualquer Pokémon da Pokédex Nacional.
+Digite o nome do pokemon: charizard
+Nome: charizard
+Número na Pokédex: 6
+Tipos: fire, flying
+Altura: 1.7m
+Peso: 90.5kg
+====STATUS BASE====
+hp: 78
+attack: 84
+defense: 78
+special-attack: 109
+special-defense: 85
+speed: 100
+```
 
-## Objetivo de aprendizado
+## Progresso
 
-O projeto foi iniciado como exercício de programação manual em Python, com foco em compreender requisições HTTP, dicionários, listas e iteração sobre dados JSON. A documentação conta com assistência de IA, sem atribuir à IA a autoria da implementação original.
+- [x] Consultar dados pela PokéAPI.
+- [x] Exibir informações básicas e as seis estatísticas base.
+- [x] Exibir todos os tipos em uma única linha.
+- [x] Converter altura e peso para unidades usuais.
+- [x] Exibir mensagem de erro para Pokémon não encontrado (HTTP 404).
+- [x] Separar a inicialização na função `main()`.
+- [ ] Normalizar a entrada (maiúsculas/minúsculas e espaços).
+- [ ] Tratar falhas de conexão, timeout e outros erros HTTP.
+- [ ] Permitir múltiplas consultas sem reiniciar o programa.
+- [ ] Criar testes automatizados.
 
-Este é um projeto educacional não oficial. Os dados são fornecidos pela [PokéAPI](https://pokeapi.co/).
+> O tratamento de erros ainda é parcial: o código verifica respostas 200 e 404, mas não captura exceções de rede nem apresenta mensagens específicas para outros códigos HTTP.
+
+## Sobre o projeto
+
+Este projeto foi iniciado como exercício prático de programação em Python, com implementação manual para consolidar conhecimentos de funções, listas, dicionários, laços de repetição, requisições HTTP e estruturas JSON. A documentação foi elaborada com apoio de IA.
+
+Projeto educacional não oficial. Dados fornecidos pela [PokéAPI](https://pokeapi.co/).
