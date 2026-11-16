@@ -65,7 +65,7 @@ speed: 100
 - [x] Converter altura e peso para unidades usuais.
 - [x] Exibir mensagem de erro para Pokémon não encontrado (HTTP 404).
 - [x] Separar a inicialização na função `main()`.
-- [ ] Normalizar a entrada (maiúsculas/minúsculas e espaços).
+- [x] Normalizar a entrada (maiúsculas/minúsculas e espaços).
 - [ ] Tratar falhas de conexão, timeout e outros erros HTTP.
 - [ ] Permitir múltiplas consultas sem reiniciar o programa.
 - [ ] Criar testes automatizados.
