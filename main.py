@@ -17,8 +17,9 @@ def pegar_info_pokemon(nome):
     #print(response.status_code) - isso aqui serve apenas para teste, deixar no produto final é feio.
     if response.status_code == 200:
         poke_dados = response.json()
+        nome_formatado = poke_dados["name"].replace('-', ' ').title() #a api usa hifen e nao o espaco, .title é para deixar a primeira letra maiuscula
         lista_tipos = []
-        print(f'Nome: {poke_dados["name"]}')
+        print(f'Nome: {nome_formatado}')
         print(f'Número na Pokédex: {poke_dados["id"]}')
         for tipo in poke_dados["types"]:
             lista_tipos.append(tipo['type']['name'])
