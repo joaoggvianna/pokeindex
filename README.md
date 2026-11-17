@@ -69,7 +69,7 @@ speed: 100
 - [x] Separar a inicialização na função `main()`.
 - [x] Normalizar a entrada (maiúsculas/minúsculas e espaços).
 - [x] Tratar falhas de conexão, timeout e outros erros HTTP.
-- [ ] Permitir múltiplas consultas sem reiniciar o programa.
+- [x] Permitir múltiplas consultas sem reiniciar o programa.
 - [ ] Criar testes automatizados.
 
 ## Sobre o projeto

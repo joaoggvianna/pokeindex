@@ -39,6 +39,7 @@ def pegar_info_pokemon(nome):
                 atributo = stat["stat"]["name"]
                 valor = stat["base_stat"]
                 print(f'{atributo}: {valor}')
+            print('====================')
         elif response.status_code == 404:
             print('ERRO: Pokémon não encontrado. Verifique se digitou o nome corretamente e tente novamente.')
         elif response.status_code == 500:
@@ -53,8 +54,12 @@ def pegar_info_pokemon(nome):
 def main():
     print('Seja bem vindo ao POKÉINDEX!')
     print('Aqui você pode consultar as informações de qualquer Pokémon da Pokédex Nacional.')
+    print('Caso queira sair do programa, digite "sair".')
     nome = input("Digite o nome do pokemon: ").strip().lower()
+    if nome =='sair':
+        print('Saindo do programa...')
+        exit()
     pegar_info_pokemon(nome)
 
-
-main()
+while True:
+    main()
