@@ -19,10 +19,12 @@ def pegar_info_pokemon(nome):
         if response.status_code == 200:
             poke_dados = response.json()
             nome_formatado = poke_dados["name"].replace('-', ' ').title() #a api usa hifen e nao o espaco, .title é para deixar a primeira letra maiuscula
+            habilidade = poke_dados["abilities"][0]["ability"]["name"].title()# abilities é uma lista, 0 é o índice dela (só tem uma por expécie)
             lista_tipos = []
             print('====INFORMAÇÕES DO POKÉMON====')
             print(f'Nome: {nome_formatado}')
             print(f'Número na Pokédex: {poke_dados["id"]}')
+            print(f'Habilidade: {habilidade}')
             for tipo in poke_dados["types"]:
                 lista_tipos.append(tipo['type']['name'])
             separador = ', '
