@@ -66,7 +66,7 @@ speed: 100
 - [x] Exibir mensagem de erro para Pokémon não encontrado (HTTP 404).
 - [x] Separar a inicialização na função `main()`.
 - [x] Normalizar a entrada (maiúsculas/minúsculas e espaços).
-- [ ] Tratar falhas de conexão, timeout e outros erros HTTP.
+- [Em andamento ] Tratar falhas de conexão, timeout e outros erros HTTP.
 - [ ] Permitir múltiplas consultas sem reiniciar o programa.
 - [ ] Criar testes automatizados.
 
