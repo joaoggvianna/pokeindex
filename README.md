@@ -42,6 +42,7 @@ O programa solicitará o nome de um Pokémon (por exemplo, `charizard`) e exibir
 ```text
 Seja bem vindo ao POKÉINDEX!
 Aqui você pode consultar as informações de qualquer Pokémon da Pokédex Nacional.
+Caso queira sair do programa, digite "sair".
 Digite o nome do pokemon: charizard
 ====INFORMAÇÕES DO POKÉMON====
 Nome: Charizard
