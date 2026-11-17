@@ -53,7 +53,7 @@ def pegar_info_pokemon(nome):
 def main():
     print('Seja bem vindo ao POKÉINDEX!')
     print('Aqui você pode consultar as informações de qualquer Pokémon da Pokédex Nacional.')
-    nome = input("Digite o nome do pokemon: ")
+    nome = input("Digite o nome do pokemon: ").strip().lower()
     pegar_info_pokemon(nome)
 
 
