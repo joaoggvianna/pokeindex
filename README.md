@@ -43,8 +43,10 @@ O programa solicitará o nome de um Pokémon (por exemplo, `charizard`) e exibir
 Seja bem vindo ao POKÉINDEX!
 Aqui você pode consultar as informações de qualquer Pokémon da Pokédex Nacional.
 Digite o nome do pokemon: charizard
-Nome: charizard
+====INFORMAÇÕES DO POKÉMON====
+Nome: Charizard
 Número na Pokédex: 6
+Habilidade: Blaze, Solar-Power
 Tipos: fire, flying
 Altura: 1.7m
 Peso: 90.5kg
@@ -66,11 +68,9 @@ speed: 100
 - [x] Exibir mensagem de erro para Pokémon não encontrado (HTTP 404).
 - [x] Separar a inicialização na função `main()`.
 - [x] Normalizar a entrada (maiúsculas/minúsculas e espaços).
-- [Em andamento ] Tratar falhas de conexão, timeout e outros erros HTTP.
+- [x] Tratar falhas de conexão, timeout e outros erros HTTP.
 - [ ] Permitir múltiplas consultas sem reiniciar o programa.
 - [ ] Criar testes automatizados.
-
-> O tratamento de erros ainda é parcial: o código verifica respostas 200 e 404, mas não captura exceções de rede nem apresenta mensagens específicas para outros códigos HTTP.
 
 ## Sobre o projeto
 
