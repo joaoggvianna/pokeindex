@@ -71,7 +71,6 @@ speed: 100
 - [x] Normalizar a entrada (maiúsculas/minúsculas e espaços).
 - [x] Tratar falhas de conexão, timeout e outros erros HTTP.
 - [x] Permitir múltiplas consultas sem reiniciar o programa.
-- [ ] Criar testes automatizados.
 
 ## Sobre o projeto
 
